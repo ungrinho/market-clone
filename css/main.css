@@ -1,0 +1,339 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+html body {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.main {
+  padding: 4rem 0 5rem;
+}
+
+header.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 75rem;
+  height: 4rem;
+  padding: 0.75rem 1rem;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.header-content__logo {
+  color: #03c75a;
+  font-size: 1.8rem;
+  font-weight: 900;
+  height: 1em;
+  margin-right: 40px;
+  line-height: 40px;
+}
+
+.header-content__nav {
+  align-items: center;
+  padding: 0 2.5rem 0 0;
+  flex-grow: 1;
+}
+.header-content__nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.header-content__nav ul li {
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 1.13rem;
+  font-weight: 900;
+}
+.header-content__nav ul li.active {
+  color: #03c75a;
+}
+
+.header-content__input {
+  justify-content: center;
+  align-items: center;
+}
+.header-content__input .search {
+  width: 18rem;
+  height: 2.5rem;
+  padding: 0.5625rem 0.75rem;
+  background-color: #F2F3F6;
+  border-color: #03c75a;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+.header-content__input .chat {
+  line-height: 1.3;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #FFFFFF;
+  border: 0.5px solid #C5C6C9;
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+.header-content__input .icon {
+  display: none;
+}
+.header-content__input .icon input {
+  margin-right: 1rem;
+  border: none;
+  padding: 0;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+@media (max-width: 1192px) {
+  .header-content__input .search {
+    display: none;
+  }
+  .header-content__input .glass {
+    display: block;
+  }
+}
+@media (max-width: 948px) {
+  .header-content__input .chat, .header-content__nav {
+    display: none;
+  }
+  .header-content__input .menu {
+    display: block;
+  }
+}
+.banner {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E5F5FD;
+  margin: 2.75rem 0 4rem;
+  padding: 1.75rem 1.5rem 1.75rem 2.0625rem;
+}
+@media (max-width: 1192px) {
+  .banner {
+    display: block;
+  }
+}
+.banner > .more__info {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: 5px;
+}
+.banner > .banner__text {
+  line-height: 1.3;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+@media (max-width: 768px) {
+  .banner > .banner__text {
+    line-height: 1.3;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+.banner > .banner__button {
+  margin: 0;
+  padding: 0.5rem 0.625rem;
+  line-height: 1.4;
+  font-size: 0.875rem;
+  background-color: #03c75a;
+  color: #FFFFFF;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.25rem;
+}
+@media (max-width: 1192px) {
+  .banner > .banner__button {
+    margin: 0.75rem 0 0;
+  }
+}
+
+.notice {
+  max-width: 48rem;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .notice {
+    padding: 0 1rem 1.25rem;
+  }
+}
+.notice .notice__title {
+  font-size: 1.625rem;
+  margin: 3.75rem 0 2.5rem;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .notice .notice__title {
+    font-weight: 700;
+    line-height: 1.3;
+    font-size: 1.25rem;
+    margin: 2.5rem 0 1.5rem;
+  }
+}
+
+.notice__container {
+  justify-content: space-between;
+  flex-wrap: wrap; /* 플렉스 아이템이 여러줄로도 배치될 수 있게끔! */
+}
+@media (max-width: 768px) {
+  .notice__container {
+    display: block;
+  }
+}
+.notice__container .notice__thumb {
+  min-width: 6.75rem;
+  min-height: 6.75rem;
+  background-color: #03c75a;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.notice__item {
+  padding: 1.25rem 0;
+  flex-basis: 48%;
+}
+.notice__item .notice__content {
+  margin-left: 1rem;
+}
+.notice__item .notice__content .notice__content__title {
+  line-height: 1.32;
+  font-size: 1.125rem;
+}
+.notice__item .notice__content .notice__content__address {
+  line-height: 1.4;
+  font-size: 0.875rem;
+  color: #aeaeae;
+}
+.notice__item .notice__content .notice__content__pay {
+  font-weight: 700;
+}
+
+.info {
+  width: 100%;
+  height: 19.6875rem;
+  background-color: #069948;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.info__text {
+  max-width: 48rem;
+  margin: auto;
+  padding: 3rem 1rem 0;
+  color: aliceblue;
+}
+
+.info__text h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  color: aliceblue;
+}
+
+.info__text p {
+  margin: 0.5rem 0 0;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: aliceblue;
+}
+
+@media (max-width: 768px) {
+  .info {
+    height: 18.375rem;
+  }
+  .info__text {
+    padding: 1.5rem 1rem 0;
+  }
+  .info__text h1 {
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
+  .info__text p {
+    display: none;
+  }
+}
+.footer {
+  color: #515255;
+  border-top: 1px solid #C3C4C7;
+  padding: 0 1rem;
+}
+
+.footer__container {
+  max-width: 48rem;
+  margin: auto;
+}
+.footer__container .footer__menu {
+  padding: 3rem 0;
+}
+.footer__container .footer__apps {
+  float: right;
+}
+@media (max-width: 768px) {
+  .footer__container .footer__apps {
+    float: none;
+    display: flex;
+    margin-bottom: 1.25rem;
+  }
+}
+.footer__container .footer__appdown {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.footer__container .footer__appbtn {
+  width: 18.75rem;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .footer__container .footer__appbtn {
+    display: none;
+  }
+}
+.footer__container .footer__appbtn button {
+  width: 48%;
+  height: 2.75rem;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.footer__container .footer__nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 33%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-size: 0.875rem;
+}
+.footer__container .footer__nav ul:nth-child(3) {
+  margin-right: 15%;
+}
+.footer__container .footer__nav ul li {
+  margin-bottom: 1rem;
+}
+.footer__container .footer__info {
+  padding: 1.5rem 0 6.25rem;
+  border-top: 1px solid #c3c4c7;
+  color: #868B94;
+  line-height: 1.5;
+  font-size: 0.813rem;
+}
